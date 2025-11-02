@@ -1,0 +1,549 @@
+/* Echos Page - Exact Figma Design */
+
+.echos-page {
+  min-height: max(2613px, 100vh);
+  width: 100%;
+  background: #7687b4;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 286px;
+}
+
+/* Background Ellipses */
+.echos-background-ellipses {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 2613px;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.echos-background-ellipses .ellipse {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  display: block;
+}
+
+/* Light blurred circles (rgba(182, 190, 215, 0.3)) */
+.echos-background-ellipses .ellipse-1 {
+  width: 495px;
+  height: 495px;
+  background: rgba(182, 190, 215, 0.5);
+  filter: blur(50px);
+  -webkit-filter: blur(50px);
+  top: 1823px;
+  left: 13px;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.echos-background-ellipses .ellipse-3 {
+  width: 495px;
+  height: 495px;
+  background: rgba(182, 190, 215, 0.5);
+  filter: blur(50px);
+  -webkit-filter: blur(50px);
+  top: 152px;
+  left: 772px;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.echos-background-ellipses .ellipse-5 {
+  width: 495px;
+  height: 495px;
+  background: rgba(182, 190, 215, 0.5);
+  filter: blur(50px);
+  -webkit-filter: blur(50px);
+  top: 1656px;
+  left: 848px;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Dark blurred circles (#3553A4) */
+.echos-background-ellipses .ellipse-2 {
+  width: 495px;
+  height: 495px;
+  background: #3553a4;
+  filter: blur(70px);
+  -webkit-filter: blur(70px);
+  top: 915px;
+  left: 70px;
+  opacity: 1;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.echos-background-ellipses .ellipse-4 {
+  width: 495px;
+  height: 495px;
+  background: #3553a4;
+  filter: blur(70px);
+  -webkit-filter: blur(70px);
+  top: -325px;
+  left: 301px;
+  opacity: 1;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.echos-background-ellipses .ellipse-6 {
+  width: 495px;
+  height: 495px;
+  background: #3553a4;
+  filter: blur(70px);
+  -webkit-filter: blur(70px);
+  top: 2236px;
+  left: 631px;
+  opacity: 1;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* ECHOS Logo */
+.echos-logo-container {
+  position: absolute;
+  top: 42px;
+  left: 66px;
+  z-index: 2;
+}
+
+.echos-main-logo {
+  height: 43px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Navigation */
+.echos-nav-bar {
+  position: absolute;
+  top: 50px;
+  right: 101px;
+  display: flex;
+  gap: 155px;
+  z-index: 1;
+}
+
+.echos-nav-item {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #152246;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.echos-nav-item-active {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.echos-nav-item:hover {
+  opacity: 0.8;
+}
+
+/* Title */
+.echos-title {
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 245px;
+  height: 77px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: #ffffff;
+  margin: 0;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Echo Cards Container */
+.echos-cards-container {
+  position: relative;
+  top: 288px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 987px;
+  z-index: 2;
+  margin-bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Echo Card */
+.echo-card {
+  width: 987px;
+  height: 449px;
+  border-radius: 30px;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  padding: 0;
+}
+
+/* Echo Card Image - Base positioning */
+.echo-card-image {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 253px;
+  height: 253px;
+}
+
+/* Standardized image positioning - all images with consistent padding */
+.echo-card:nth-child(1) .echo-card-image {
+  left: 40px;
+  top: 98px;
+}
+
+.echo-card:nth-child(2) .echo-card-image {
+  left: 40px;
+  top: 98px;
+  width: 253px;
+  height: 253px;
+}
+
+.echo-card:nth-child(3) .echo-card-image {
+  left: 40px;
+  top: 98px;
+}
+
+.echo-card:nth-child(4) .echo-card-image {
+  left: 40px;
+  top: 98px;
+  width: 253px;
+  height: 253px;
+}
+
+/* Echo Card Content - Standardized positioning */
+.echo-card-content {
+  position: absolute;
+  width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  left: 320px; /* Consistent left position: 40px (image left) + 253px (image width) + 27px (spacing) */
+  top: 130px; /* Consistent top position for all cards */
+}
+
+/* Echo Card Name */
+.echo-card-name {
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0;
+}
+
+/* Echo Card Description */
+.echo-card-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+  width: 620px;
+}
+
+/* Echo Card Button Container - Standardized positioning */
+.echo-card-button-container {
+  position: absolute;
+  width: 287px;
+  height: 72px;
+  left: 653px; /* Consistent left: 320px (content left) + 333px (button positioning) */
+  top: 308px; /* Consistent top position for all buttons */
+}
+
+/* Echo Card Button */
+.echo-card-button {
+  width: 100%;
+  height: 100%;
+  background: #7687b4;
+  border: none;
+  border-radius: 30px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.echo-card-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Footer Section */
+.echos-footer-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 286px;
+  background: #b6bed7;
+  z-index: 1;
+}
+
+.echos-footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr 2.5fr;
+  gap: 70px 55px;
+  padding: 59px 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.echos-footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer Socials Column */
+.echos-footer-socials {
+  grid-column: 1;
+}
+
+.echos-footer-text-large {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #505050;
+  margin: 0 0 24px 0;
+}
+
+.echos-social-icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.echos-social-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.echos-social-icon-twitter {
+  width: 40px;
+  height: 33px;
+  object-fit: contain;
+}
+
+/* Footer Nav Column */
+.echos-footer-nav {
+  grid-column: 2;
+  gap: 20px;
+}
+
+.echos-footer-nav p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #505050;
+  margin: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.echos-footer-nav p:hover {
+  opacity: 0.7;
+}
+
+/* Footer Contact Column */
+.echos-footer-contact {
+  grid-column: 3;
+  gap: 21px;
+}
+
+.echos-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.echos-contact-icon {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.echos-email-icon {
+  width: 22px;
+  height: 27px;
+}
+
+.echos-contact-item p {
+  font-family: "PP Nikkei Journal", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: #505050;
+  margin: 0;
+}
+
+/* Footer Newsletter Column */
+.echos-footer-newsletter {
+  grid-column: 4;
+}
+
+.echos-newsletter-form {
+  position: relative;
+  width: 293px;
+  height: 49px;
+  margin-top: 36px;
+}
+
+.echos-email-input {
+  width: 286px;
+  height: 48px;
+  background: #f7f8f4;
+  border: none;
+  border-radius: 40px;
+  padding: 0 120px 0 18px;
+  font-family: "PP Nikkei Journal", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #a4a0a0;
+  outline: none;
+}
+
+.echos-join-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 99px;
+  height: 49px;
+  background: #152246;
+  border: none;
+  border-radius: 50px;
+  font-family: "PP Nikkei Maru", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.echos-join-btn:hover {
+  background: #1a2d5f;
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+/* Large screens at ~54.7cm / 2070px */
+@media (max-width: 2070px) {
+  .echos-nav-bar {
+    right: 50px;
+    gap: 100px;
+  }
+
+  .echos-cards-container {
+    width: calc(100% - 100px);
+    max-width: 987px;
+  }
+
+  .echo-card {
+    width: 100%;
+    max-width: 987px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .echos-nav-bar {
+    right: 50px;
+    gap: 100px;
+  }
+
+  .echos-cards-container {
+    left: 40px;
+    right: 40px;
+    max-width: calc(100% - 80px);
+  }
+
+  .echo-card {
+    width: 100%;
+    max-width: 987px;
+  }
+}
+
+@media (max-width: 768px) {
+  .echos-nav-bar {
+    top: 20px;
+    right: 20px;
+    gap: 40px;
+    font-size: 16px;
+  }
+
+  .echos-logo-container {
+    top: 20px;
+    left: 20px;
+  }
+
+  .echos-main-logo {
+    height: 32px;
+  }
+
+  .echos-title {
+    font-size: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .echos-cards-container {
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .echo-card {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .echo-card-image {
+    position: relative;
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .echo-card-content {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .echo-card-button {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin-top: 20px;
+  }
+}

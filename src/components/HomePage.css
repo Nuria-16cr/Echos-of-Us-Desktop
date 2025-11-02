@@ -1,0 +1,607 @@
+/* Home Page - Exact Figma Design */
+
+.home-page {
+  min-height: 2613px;
+  width: 100%;
+  background: #6e81b2;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 0;
+}
+
+.home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1700px;
+  background-image: url("/hero-background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Navigation */
+.nav-bar {
+  position: absolute;
+  top: 50px;
+  right: 101px;
+  display: flex;
+  gap: 155px;
+  z-index: 1;
+}
+
+.nav-item {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #152246;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.nav-item-active {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-item:hover {
+  opacity: 0.8;
+}
+
+/* ECHOS Logo */
+.logo-container {
+  position: absolute;
+  top: 41px;
+  left: 50px;
+  z-index: 1;
+}
+
+.main-logo {
+  height: 43px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Hero Section 1 */
+.hero-section-1 {
+  position: absolute;
+  top: 271px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 589px;
+  max-width: calc(100% - 40px);
+}
+
+.hero-heading {
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: #ffffff;
+  margin: 0 0 49px 0;
+}
+
+.hero-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Meet the Echos Button */
+.meet-echos-btn {
+  position: absolute;
+  top: 572px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  max-width: calc(100% - 40px);
+  height: 72px;
+  background: #152246;
+  border: none;
+  border-radius: 30px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meet-echos-btn:hover {
+  background: #1a2d5f;
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section 2 */
+.hero-section-2 {
+  position: absolute;
+  top: 885px;
+  left: 591px;
+  width: 589px;
+}
+
+/* Noah Card */
+.noah-card {
+  position: absolute;
+  top: 850px;
+  left: 95px;
+  width: 364px;
+  height: 449px;
+  background: #a08bc1;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.noah-image {
+  position: absolute;
+  top: 56px;
+  left: 67px;
+  width: 249px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.noah-title {
+  position: absolute;
+  top: 331px;
+  left: 125px;
+  width: 137px;
+  height: 47px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #5f3f8c;
+  margin: 0;
+}
+
+.noah-btn {
+  position: absolute;
+  top: 403px;
+  left: 75px;
+  width: 237px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: opacity 0.3s ease;
+}
+
+.noah-btn:hover {
+  opacity: 0.7;
+}
+
+/* Chat Now Button */
+.chat-now-btn {
+  position: absolute;
+  top: 1168px;
+  left: 698px;
+  width: 287px;
+  height: 72px;
+  background: #152246;
+  border: none;
+  border-radius: 30px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-now-btn:hover {
+  background: #1a2d5f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features-section {
+  position: absolute;
+  top: 418px;
+  left: 78%;
+  transform: translateX(-50%);
+  width: 634px;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  z-index: 1;
+}
+
+.features-icon {
+  flex-shrink: 0;
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Gotham", sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38.4px;
+  color: #ffffff;
+}
+
+.features-list li {
+  margin-bottom: 0;
+}
+
+/* Stats Section */
+.stats-section {
+  position: absolute;
+  top: 1442px;
+  left: 0;
+  width: 100%;
+  height: 372px;
+  background: #b6bed7;
+  padding: 0;
+}
+
+.stats-heading {
+  position: absolute;
+  top: 82px;
+  left: 90px;
+  width: 341px;
+  height: 36px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #1d1d1f;
+  margin: 0;
+}
+
+.stats-grid {
+  position: absolute;
+  top: 152px;
+  left: 81px;
+  right: 52px;
+  display: flex;
+  gap: 17px;
+}
+
+.stat-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1d1d1f;
+  margin: 0;
+  flex: 1;
+}
+
+/* How It Works Container - No background */
+.how-it-works-container {
+  position: absolute;
+  top: 1814px;
+  left: 0;
+  width: 100%;
+  background: #6e81b2;
+  padding: 84px 0 113px;
+  z-index: 1;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  position: relative;
+  left: 124px;
+  width: 1028px;
+}
+
+/* Footer Section */
+.footer-section {
+  position: absolute;
+  top: 2327px;
+  left: 0;
+  width: 100%;
+  height: 286px;
+  background: #b6bed7;
+  z-index: 1;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr 2.5fr;
+  gap: 70px 55px;
+  padding: 59px 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer Socials Column */
+.footer-socials {
+  grid-column: 1;
+}
+
+.footer-text-large {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #505050;
+  margin: 0 0 24px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.social-icon-twitter {
+  width: 40px;
+  height: 33px;
+  object-fit: contain;
+}
+
+/* Footer Nav Column */
+.footer-nav {
+  grid-column: 2;
+  gap: 20px;
+}
+
+.footer-nav p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #505050;
+  margin: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav p:hover {
+  opacity: 0.7;
+}
+
+/* Footer Contact Column */
+.footer-contact {
+  grid-column: 3;
+  gap: 21px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-icon {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.contact-icon.email-icon {
+  width: 22px;
+  height: 27px;
+}
+
+.contact-item p {
+  font-family: "PP Nikkei Journal", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: #505050;
+  margin: 0;
+}
+
+/* Footer Newsletter Column */
+.footer-newsletter {
+  grid-column: 4;
+}
+
+.newsletter-form {
+  position: relative;
+  width: 293px;
+  height: 49px;
+  margin-top: 36px;
+}
+
+.email-input {
+  width: 286px;
+  height: 48px;
+  background: #f7f8f4;
+  border: none;
+  border-radius: 40px;
+  padding: 0 120px 0 18px;
+  font-family: "PP Nikkei Journal", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #a4a0a0;
+  outline: none;
+}
+
+.join-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 99px;
+  height: 49px;
+  background: #152246;
+  border: none;
+  border-radius: 50px;
+  font-family: "PP Nikkei Maru", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+  background: #1a2d5f;
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+/* Large screens at ~54.7cm / 2070px */
+@media (max-width: 2070px) {
+  .nav-bar {
+    right: 50px;
+    gap: 100px;
+  }
+
+  .hero-section-1 {
+    left: 25%;
+    transform: translateX(-50%);
+    width: 589px;
+    max-width: calc(100% - 40px);
+  }
+
+  .meet-echos-btn {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 1440px) {
+  .nav-bar {
+    right: 50px;
+    gap: 100px;
+  }
+
+  .meet-echos-btn,
+  .chat-now-btn {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .noah-card {
+    right: 50px;
+  }
+
+  .features-section {
+    left: 78%;
+    transform: translateX(-50%);
+  }
+
+  .stats-section {
+    padding: 60px 40px;
+  }
+
+  .how-it-works-section {
+    left: 40px;
+    right: 40px;
+    max-width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    top: 20px;
+    right: 20px;
+    gap: 40px;
+    font-size: 16px;
+  }
+
+  .logo-container {
+    top: 20px;
+    left: 20px;
+  }
+
+  .main-logo {
+    height: 32px;
+  }
+
+  .hero-section-1,
+  .hero-section-2 {
+    padding: 120px 20px 0;
+  }
+
+  .hero-heading {
+    font-size: 32px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .meet-echos-btn,
+  .chat-now-btn {
+    width: calc(100% - 40px);
+    left: 20px;
+    transform: none;
+  }
+
+  .noah-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 40px 20px;
+  }
+
+  .features-section {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 40px 20px;
+  }
+
+  .features-list {
+    font-size: 24px;
+  }
+
+  .stats-section {
+    position: relative;
+    top: auto;
+    padding: 40px 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .how-it-works-section {
+    position: relative;
+    top: auto;
+    left: 20px;
+    right: 20px;
+    max-width: calc(100% - 40px);
+  }
+}

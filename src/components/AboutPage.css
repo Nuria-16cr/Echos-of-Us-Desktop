@@ -1,0 +1,494 @@
+/* About Page - Exact Figma Design */
+
+.about-page {
+  min-height: 2392px;
+  width: 100%;
+  background: #7687b4;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 0;
+}
+
+/* Background Image */
+.about-background-image {
+  position: absolute;
+  top: 461px;
+  left: 0;
+  width: 100%;
+  height: 1931px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.about-background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Smooth Gradient Overlay - Transitions image into background */
+.about-blur-overlay {
+  position: absolute;
+  top: 461px;
+  left: 0;
+  width: 100%;
+  height: 295px;
+  background: linear-gradient(
+    to bottom,
+    #7687b4 0%,
+    rgba(118, 135, 180, 0.9) 30%,
+    rgba(118, 135, 180, 0.7) 60%,
+    rgba(118, 135, 180, 0.3) 80%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ECHOS Logo */
+.about-logo-container {
+  position: absolute;
+  top: 47px;
+  left: 57px;
+  z-index: 2;
+}
+
+.about-main-logo {
+  height: 43px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Navigation */
+.about-nav-bar {
+  position: absolute;
+  top: 50px;
+  right: 101px;
+  display: flex;
+  gap: 155px;
+  z-index: 1;
+}
+
+.about-nav-item {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #152246;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.about-nav-item-active {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.about-nav-item:hover {
+  opacity: 0.8;
+}
+
+/* Title */
+.about-title {
+  position: absolute;
+  top: 222px;
+  left: 68px;
+  width: 245px;
+  height: 77px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: #ffffff;
+  margin: 0;
+  z-index: 2;
+}
+
+/* Main Content Sections */
+.about-content-sections {
+  position: absolute;
+  top: 313px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 68px;
+  gap: 137px;
+}
+
+/* Left Column */
+.about-left-column {
+  width: 497px;
+}
+
+/* Right Column */
+.about-right-column {
+  width: 497px;
+}
+
+/* About Text */
+.about-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Features Section */
+.about-features-section {
+  position: absolute;
+  top: 925px;
+  left: 181px;
+  width: 702px;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  z-index: 2;
+}
+
+.about-features-icon {
+  flex-shrink: 0;
+  width: 92px;
+  height: 84.22px;
+  object-fit: contain;
+  transform: rotate(-90deg);
+}
+
+.about-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Gotham", sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38.4px;
+  color: #ffffff;
+}
+
+.about-features-list li {
+  margin-bottom: 0;
+}
+
+/* Quote Section */
+.about-quote-section {
+  position: absolute;
+  top: 1562px;
+  left: 0;
+  width: 100%;
+  height: 372px;
+  background: #7687b4;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-quote-content {
+  width: 1162px;
+  padding: 0 76px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-quote-main {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+  width: 1162px;
+}
+
+.about-quote-attribution {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  width: 803px;
+  margin: 0 auto;
+}
+
+.about-quote-echo {
+  display: block;
+  margin-top: 20px;
+}
+
+/* Footer Section */
+.about-footer-section {
+  position: absolute;
+  top: 2106px;
+  left: 0;
+  width: 100%;
+  height: 286px;
+  background: #b6bed7;
+  z-index: 2;
+}
+
+.about-footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr 2.5fr;
+  gap: 70px 55px;
+  padding: 59px 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer Socials Column */
+.about-footer-socials {
+  grid-column: 1;
+}
+
+.about-footer-text-large {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #505050;
+  margin: 0 0 24px 0;
+}
+
+.about-social-icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.about-social-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.about-social-icon-twitter {
+  width: 40px;
+  height: 33px;
+  object-fit: contain;
+}
+
+/* Footer Nav Column */
+.about-footer-nav {
+  grid-column: 2;
+  gap: 20px;
+}
+
+.about-footer-nav p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #505050;
+  margin: 0;
+}
+
+/* Footer Contact Column */
+.about-footer-contact {
+  grid-column: 3;
+  gap: 21px;
+}
+
+.about-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.about-contact-icon {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.about-email-icon {
+  width: 22px;
+  height: 27px;
+}
+
+.about-contact-item p {
+  font-family: "PP Nikkei Journal", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: #505050;
+  margin: 0;
+}
+
+/* Footer Newsletter Column */
+.about-footer-newsletter {
+  grid-column: 4;
+}
+
+.about-newsletter-form {
+  position: relative;
+  width: 293px;
+  height: 49px;
+  margin-top: 36px;
+}
+
+.about-email-input {
+  width: 286px;
+  height: 48px;
+  background: #f7f8f4;
+  border: none;
+  border-radius: 40px;
+  padding: 0 120px 0 18px;
+  font-family: "PP Nikkei Journal", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #a4a0a0;
+  outline: none;
+}
+
+.about-join-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 99px;
+  height: 49px;
+  background: #152246;
+  border: none;
+  border-radius: 50px;
+  font-family: "PP Nikkei Maru", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-join-btn:hover {
+  background: #1a2d5f;
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+/* Large screens at ~54.7cm / 2070px */
+@media (max-width: 2070px) {
+  .about-nav-bar {
+    right: 50px;
+    gap: 100px;
+  }
+
+  .about-content-sections {
+    padding: 0 50px;
+    gap: 100px;
+  }
+
+  .about-left-column,
+  .about-right-column {
+    width: calc(50% - 50px);
+    max-width: 497px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-nav-bar {
+    right: 50px;
+    gap: 100px;
+  }
+
+  .about-content-sections {
+    padding: 0 40px;
+    gap: 80px;
+  }
+
+  .about-left-column,
+  .about-right-column {
+    width: calc(50% - 40px);
+  }
+
+  .about-features-section {
+    left: 40px;
+  }
+
+  .about-quote-content {
+    width: calc(100% - 152px);
+    padding: 0 76px;
+  }
+
+  .about-quote-attribution {
+    width: 100%;
+    max-width: 803px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-nav-bar {
+    top: 20px;
+    right: 20px;
+    gap: 40px;
+    font-size: 16px;
+  }
+
+  .about-logo-container {
+    top: 20px;
+    left: 20px;
+  }
+
+  .about-main-logo {
+    height: 32px;
+  }
+
+  .about-title {
+    font-size: 32px;
+    left: 20px;
+  }
+
+  .about-content-sections {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .about-left-column,
+  .about-right-column {
+    width: 100%;
+  }
+
+  .about-features-section {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 40px 20px;
+    flex-direction: column;
+  }
+
+  .about-features-list {
+    font-size: 24px;
+  }
+
+  .about-quote-section {
+    position: relative;
+    top: auto;
+    padding: 40px 20px;
+  }
+
+  .about-quote-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-quote-main {
+    width: 100%;
+  }
+
+  .about-quote-attribution {
+    width: 100%;
+    font-size: 20px;
+  }
+}
