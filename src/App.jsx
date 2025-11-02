@@ -15,15 +15,19 @@ export default function App() {
   const [isTyping, setIsTyping] = useState(false);
   const [lastUsedTimes, setLastUsedTimes] = useState(() => {
     // Initialize from localStorage or create empty object
-    const stored = localStorage.getItem("echosLastUsedTimes");
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      // Convert date strings back to Date objects
-      const converted = {};
-      Object.keys(parsed).forEach((key) => {
-        converted[key] = new Date(parsed[key]);
-      });
-      return converted;
+    try {
+      const stored = localStorage.getItem("echosLastUsedTimes");
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        // Convert date strings back to Date objects
+        const converted = {};
+        Object.keys(parsed).forEach((key) => {
+          converted[key] = new Date(parsed[key]);
+        });
+        return converted;
+      }
+    } catch (error) {
+      console.error("Error loading lastUsedTimes from localStorage:", error);
     }
     return {};
   });
