@@ -11,13 +11,17 @@ export default function App() {
 
   useEffect(() => {
     const checkMobile = () => {
-      const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const isMobileDevice =
+        window.innerWidth <= 768 ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
       setIsMobile(isMobileDevice);
     };
-    
+
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const [currentView, setCurrentView] = useState("home");
@@ -236,38 +240,17 @@ export default function App() {
   // Show mobile-only message screen
   if (isMobile) {
     return (
-      <div style={{
-        width: '100vw',
-        height: '100vh',
-        background: '#7687b4',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '40px 20px',
-        boxSizing: 'border-box'
-      }}>
-        <img 
-          src={getAssetPath("/echos-logo.svg")} 
-          alt="ECHOS" 
-          style={{
-            height: '60px',
-            width: 'auto',
-            marginBottom: '40px',
-            filter: 'brightness(0) invert(1)'
-          }} 
-        />
-        <p style={{
-          fontFamily: '"Inter", sans-serif',
-          fontSize: '18px',
-          lineHeight: '26px',
-          color: '#ffffff',
-          textAlign: 'center',
-          maxWidth: '400px',
-          margin: 0
-        }}>
-          Sorry, this website is only available on desktop.
-        </p>
+      <div className="mobile-message-screen">
+        <div className="mobile-message-content">
+          <img
+            src={getAssetPath("/echos-logo.svg")}
+            alt="ECHOS"
+            className="mobile-message-logo"
+          />
+          <p className="mobile-message-text">
+            We apologise for the inconvenience, ECHOS is only responsive on desktop.
+          </p>
+        </div>
       </div>
     );
   }
