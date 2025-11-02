@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getAssetPath } from "../utils/assetPath";
 
 export default function HomePage({ onStartChat, onNavigate }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +29,11 @@ export default function HomePage({ onStartChat, onNavigate }) {
 
       {/* ECHOS Logo */}
       <div className="logo-container">
-        <img src="/echos-logo.svg" alt="ECHOS" className="main-logo" />
+        <img
+          src={getAssetPath("/echos-logo.svg")}
+          alt="ECHOS"
+          className="main-logo"
+        />
       </div>
 
       {/* Hero Section 1 */}
@@ -59,7 +64,11 @@ export default function HomePage({ onStartChat, onNavigate }) {
 
       {/* Noah Card */}
       <div className="noah-card">
-        <img src="/Noah.png" alt="Noah" className="noah-image" />
+        <img
+          src={getAssetPath("/Noah.png")}
+          alt="Noah"
+          className="noah-image"
+        />
         <h2 className="noah-title">NOAH</h2>
         <button className="noah-btn" onClick={() => onStartChat("Noah")}>
           Start Emotional Connection Now
@@ -73,7 +82,11 @@ export default function HomePage({ onStartChat, onNavigate }) {
 
       {/* Features Section */}
       <div className="features-section">
-        <img src="/icons/plus-circle.svg" alt="" className="features-icon" />
+        <img
+          src={getAssetPath("/icons/plus-circle.svg")}
+          alt=""
+          className="features-icon"
+        />
         <ul className="features-list">
           <li>Emotional Intelligence</li>
           <li>Fast responses</li>
@@ -132,17 +145,17 @@ export default function HomePage({ onStartChat, onNavigate }) {
             </p>
             <div className="social-icons">
               <img
-                src="/icons/facebook-icon.svg"
+                src={getAssetPath("/icons/facebook-icon.svg")}
                 alt="Facebook"
                 className="social-icon"
               />
               <img
-                src="/icons/instagram-icon.svg"
+                src={getAssetPath("/icons/instagram-icon.svg")}
                 alt="Instagram"
                 className="social-icon"
               />
               <img
-                src="/icons/twitter-icon.svg"
+                src={getAssetPath("/icons/twitter-icon.svg")}
                 alt="Twitter"
                 className="social-icon-twitter"
               />
@@ -160,7 +173,7 @@ export default function HomePage({ onStartChat, onNavigate }) {
           <div className="footer-column footer-contact">
             <div className="contact-item">
               <img
-                src="/icons/location-icon.svg"
+                src={getAssetPath("/icons/location-icon.svg")}
                 alt=""
                 className="contact-icon"
               />
@@ -168,7 +181,7 @@ export default function HomePage({ onStartChat, onNavigate }) {
             </div>
             <div className="contact-item">
               <img
-                src="/icons/phone-icon.svg"
+                src={getAssetPath("/icons/phone-icon.svg")}
                 alt=""
                 className="contact-icon"
               />
@@ -176,7 +189,7 @@ export default function HomePage({ onStartChat, onNavigate }) {
             </div>
             <div className="contact-item">
               <img
-                src="/icons/email-icon.svg"
+                src={getAssetPath("/icons/email-icon.svg")}
                 alt=""
                 className="contact-icon email-icon"
               />

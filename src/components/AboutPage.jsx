@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getAssetPath } from "../utils/assetPath";
 import "./AboutPage.css";
 
 export default function AboutPage({ onNavigate }) {
@@ -12,7 +13,7 @@ export default function AboutPage({ onNavigate }) {
     <div className="about-page">
       {/* Background Image */}
       <div className="about-background-image">
-        <img src="/aboutBackgroundImg.png" alt="Background" />
+        <img src={getAssetPath("/aboutBackgroundImg.png")} alt="Background" />
       </div>
 
       {/* Blurred Top Overlay */}
@@ -20,7 +21,11 @@ export default function AboutPage({ onNavigate }) {
 
       {/* ECHOS Logo */}
       <div className="about-logo-container">
-        <img src="/echos-logo.svg" alt="ECHOS" className="about-main-logo" />
+        <img
+          src={getAssetPath("/echos-logo.svg")}
+          alt="ECHOS"
+          className="about-main-logo"
+        />
       </div>
 
       {/* Navigation */}
@@ -79,7 +84,7 @@ export default function AboutPage({ onNavigate }) {
       {/* Features Section */}
       <div className="about-features-section">
         <img
-          src="/icons/plus-circle.svg"
+          src={getAssetPath("/icons/plus-circle.svg")}
           alt=""
           className="about-features-icon"
         />
@@ -118,17 +123,17 @@ export default function AboutPage({ onNavigate }) {
             </p>
             <div className="about-social-icons">
               <img
-                src="/icons/facebook-icon.svg"
+                src={getAssetPath("/icons/facebook-icon.svg")}
                 alt="Facebook"
                 className="about-social-icon"
               />
               <img
-                src="/icons/instagram-icon.svg"
+                src={getAssetPath("/icons/instagram-icon.svg")}
                 alt="Instagram"
                 className="about-social-icon"
               />
               <img
-                src="/icons/twitter-icon.svg"
+                src={getAssetPath("/icons/twitter-icon.svg")}
                 alt="Twitter"
                 className="about-social-icon-twitter"
               />
@@ -146,7 +151,7 @@ export default function AboutPage({ onNavigate }) {
           <div className="about-footer-column about-footer-contact">
             <div className="about-contact-item">
               <img
-                src="/icons/location-icon.svg"
+                src={getAssetPath("/icons/location-icon.svg")}
                 alt=""
                 className="about-contact-icon"
               />
@@ -154,7 +159,7 @@ export default function AboutPage({ onNavigate }) {
             </div>
             <div className="about-contact-item">
               <img
-                src="/icons/phone-icon.svg"
+                src={getAssetPath("/icons/phone-icon.svg")}
                 alt=""
                 className="about-contact-icon"
               />
@@ -162,7 +167,7 @@ export default function AboutPage({ onNavigate }) {
             </div>
             <div className="about-contact-item">
               <img
-                src="/icons/email-icon.svg"
+                src={getAssetPath("/icons/email-icon.svg")}
                 alt=""
                 className="about-contact-icon about-email-icon"
               />

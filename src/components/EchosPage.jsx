@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getAssetPath } from "../utils/assetPath";
 import "./EchosPage.css";
 
 export default function EchosPage({ onStartChat, onNavigate }) {
@@ -11,7 +12,7 @@ export default function EchosPage({ onStartChat, onNavigate }) {
   const echos = [
     {
       name: "ALEX",
-      image: "/Alex.png",
+      image: getAssetPath("/Alex.png"),
       description:
         "Caring and compassionate  Alex can be your best friend when you need it the most he will be there to listen, give advice and cheer you up.",
       backgroundColor: "#D6B9CA",
@@ -20,7 +21,7 @@ export default function EchosPage({ onStartChat, onNavigate }) {
     },
     {
       name: "NOAH",
-      image: "/Noah.png",
+      image: getAssetPath("/Noah.png"),
       description:
         "Chaotic and unapologetic, Noah is won't beat around the bush, chat to him for some tough love, a good laugh or a reality check. ",
       backgroundColor: "#A08BC1",
@@ -29,7 +30,7 @@ export default function EchosPage({ onStartChat, onNavigate }) {
     },
     {
       name: "ELLIS",
-      image: "/Ellis.png",
+      image: getAssetPath("/Ellis.png"),
       description:
         "Energetic and positive, Ellis is a ray of sunshine, maybe her positivity is a bit overwhelming but she wont fail to cheer you up.",
       backgroundColor: "#EDD2AE",
@@ -38,7 +39,7 @@ export default function EchosPage({ onStartChat, onNavigate }) {
     },
     {
       name: "ROBIN",
-      image: "/Robin.png",
+      image: getAssetPath("/Robin.png"),
       description:
         "Calculated and intelligent, Robin is there for an analytical approach to all your problems, delve into philosophical queries and speculative theories.",
       backgroundColor: "#969D88",
@@ -61,7 +62,11 @@ export default function EchosPage({ onStartChat, onNavigate }) {
 
       {/* ECHOS Logo */}
       <div className="echos-logo-container">
-        <img src="/echos-logo.svg" alt="ECHOS" className="echos-main-logo" />
+        <img
+          src={getAssetPath("/echos-logo.svg")}
+          alt="ECHOS"
+          className="echos-main-logo"
+        />
       </div>
 
       {/* Navigation */}
@@ -121,17 +126,17 @@ export default function EchosPage({ onStartChat, onNavigate }) {
             </p>
             <div className="echos-social-icons">
               <img
-                src="/icons/facebook-icon.svg"
+                src={getAssetPath("/icons/facebook-icon.svg")}
                 alt="Facebook"
                 className="echos-social-icon"
               />
               <img
-                src="/icons/instagram-icon.svg"
+                src={getAssetPath("/icons/instagram-icon.svg")}
                 alt="Instagram"
                 className="echos-social-icon"
               />
               <img
-                src="/icons/twitter-icon.svg"
+                src={getAssetPath("/icons/twitter-icon.svg")}
                 alt="Twitter"
                 className="echos-social-icon-twitter"
               />
@@ -149,7 +154,7 @@ export default function EchosPage({ onStartChat, onNavigate }) {
           <div className="echos-footer-column echos-footer-contact">
             <div className="echos-contact-item">
               <img
-                src="/icons/location-icon.svg"
+                src={getAssetPath("/icons/location-icon.svg")}
                 alt=""
                 className="echos-contact-icon"
               />
@@ -157,7 +162,7 @@ export default function EchosPage({ onStartChat, onNavigate }) {
             </div>
             <div className="echos-contact-item">
               <img
-                src="/icons/phone-icon.svg"
+                src={getAssetPath("/icons/phone-icon.svg")}
                 alt=""
                 className="echos-contact-icon"
               />
@@ -165,7 +170,7 @@ export default function EchosPage({ onStartChat, onNavigate }) {
             </div>
             <div className="echos-contact-item">
               <img
-                src="/icons/email-icon.svg"
+                src={getAssetPath("/icons/email-icon.svg")}
                 alt=""
                 className="echos-contact-icon echos-email-icon"
               />

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import HomePage from "./components/HomePage";
 import EchosPage from "./components/EchosPage";
 import AboutPage from "./components/AboutPage";
+import { getAssetPath } from "./utils/assetPath";
 import "./components/HomePage.css";
 
 export default function App() {
@@ -122,7 +123,8 @@ export default function App() {
     });
 
     try {
-      const res = await fetch("http://localhost:3001/chat", {
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+      const res = await fetch(`${API_URL}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -130,6 +132,10 @@ export default function App() {
           persona: currentChat, // Send the current persona name
         }),
       });
+
+      if (!res.ok) {
+        throw new Error(`Server responded with ${res.status}`);
+      }
 
       const data = await res.json();
       const aiMessage = {
@@ -143,6 +149,15 @@ export default function App() {
       setIsTyping(true);
     } catch (err) {
       console.error(`Error talking to ${currentChat}:`, err);
+      // Show error message to user
+      const errorMessage = {
+        sender: currentChat,
+        text: "Sorry, I'm having trouble connecting right now. Please make sure the backend server is running.",
+        displayText: "",
+        timestamp: new Date(),
+        fullyTyped: true,
+      };
+      setMessages((m) => [...m, errorMessage]);
     } finally {
       setLoading(false);
     }
@@ -159,7 +174,7 @@ export default function App() {
   const chatFriends = [
     {
       name: "Alex",
-      avatar: "/Alex.png",
+      avatar: getAssetPath("/Alex.png"),
       preview: "This is a text message with Alex, resume talking.",
       colors: {
         primary: "#792355",
@@ -169,7 +184,7 @@ export default function App() {
     },
     {
       name: "Noah",
-      avatar: "/Noah.png",
+      avatar: getAssetPath("/Noah.png"),
       preview: "This is a text message with Noah, resume talking.",
       colors: {
         primary: "#5c338e",
@@ -179,7 +194,7 @@ export default function App() {
     },
     {
       name: "Ellis",
-      avatar: "/Ellis.png",
+      avatar: getAssetPath("/Ellis.png"),
       preview: "This is a text message with Ellis, resume talking.",
       colors: {
         primary: "#734283",
@@ -189,7 +204,7 @@ export default function App() {
     },
     {
       name: "Robin",
-      avatar: "/Robin.png",
+      avatar: getAssetPath("/Robin.png"),
       preview: "This is a text message with Robin, resume talking.",
       colors: {
         primary: "#DC584F",
@@ -334,7 +349,7 @@ export default function App() {
             <div className="sidebar-header">
               <div className="header-left">
                 <img
-                  src="/echos-logo.svg"
+                  src={getAssetPath("/echos-logo.svg")}
                   alt="ECHOS"
                   className="sidebar-logo"
                 />
@@ -457,14 +472,14 @@ export default function App() {
                   <img
                     src={
                       currentChat === "Alex"
-                        ? "/Alex.png"
+                        ? getAssetPath("/Alex.png")
                         : currentChat === "Noah"
-                        ? "/Noah.png"
+                        ? getAssetPath("/Noah.png")
                         : currentChat === "Ellis"
-                        ? "/Ellis.png"
+                        ? getAssetPath("/Ellis.png")
                         : currentChat === "Robin"
-                        ? "/Robin.png"
-                        : "/Alex.png"
+                        ? getAssetPath("/Robin.png")
+                        : getAssetPath("/Alex.png")
                     }
                     alt={currentChat}
                   />
