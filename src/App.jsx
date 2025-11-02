@@ -248,7 +248,8 @@ export default function App() {
             className="mobile-message-logo"
           />
           <p className="mobile-message-text">
-            We apologise for the inconvenience, ECHOS is only responsive on desktop.
+            We apologise for the inconvenience, ECHOS is only responsive on
+            desktop.
           </p>
         </div>
       </div>

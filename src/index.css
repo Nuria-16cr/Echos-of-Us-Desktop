@@ -422,7 +422,7 @@ body {
   75% {
     top: 60%;
     left: 15%;
-}
+  }
   100% {
     top: 20%;
     left: 15%;
@@ -1064,7 +1064,7 @@ body {
   }
 
   .emoji-icon,
-.send-icon {
+  .send-icon {
     width: 20px;
     height: 20px;
   }
