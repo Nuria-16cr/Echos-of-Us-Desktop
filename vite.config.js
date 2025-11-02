@@ -2,6 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/Echos-of-Us-Desktop/", // 👈 must match your GitHub repo name exactly
+  base: "/", // Netlify doesn't need subfolder paths
   plugins: [react()],
 });
