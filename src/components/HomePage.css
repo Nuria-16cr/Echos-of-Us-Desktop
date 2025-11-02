@@ -532,76 +532,225 @@
 }
 
 @media (max-width: 768px) {
+  .home-page {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .home-page::before {
+    height: 400px;
+  }
+
   .nav-bar {
-    top: 20px;
-    right: 20px;
-    gap: 40px;
-    font-size: 16px;
+    top: 15px;
+    right: 15px;
+    gap: 30px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    font-size: 14px;
   }
 
   .logo-container {
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
   }
 
   .main-logo {
-    height: 32px;
+    height: 28px;
   }
 
-  .hero-section-1,
-  .hero-section-2 {
-    padding: 120px 20px 0;
+  .hero-section-1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: calc(100% - 40px);
+    padding: 100px 20px 30px;
+    margin: 0 auto;
   }
 
   .hero-heading {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 20px;
   }
 
   .hero-text {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
-  .meet-echos-btn,
-  .chat-now-btn {
-    width: calc(100% - 40px);
-    left: 20px;
+  .meet-echos-btn {
+    position: relative;
+    top: auto;
+    left: auto;
     transform: none;
+    width: calc(100% - 40px);
+    margin: 0 auto 30px;
+    max-width: 380px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .hero-section-2 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    margin: 0 auto;
   }
 
   .noah-card {
     position: relative;
     top: auto;
-    right: auto;
-    margin: 40px 20px;
+    left: auto;
+    width: calc(100% - 40px);
+    max-width: 364px;
+    height: auto;
+    margin: 0 auto 30px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .noah-image {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+
+  .noah-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .noah-btn {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .chat-now-btn {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: calc(100% - 40px);
+    max-width: 287px;
+    margin: 0 auto 40px;
+    height: 60px;
+    font-size: 24px;
   }
 
   .features-section {
     position: relative;
     top: auto;
-    right: auto;
-    margin: 40px 20px;
+    left: auto;
+    transform: none;
+    width: calc(100% - 40px);
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .features-icon {
+    width: 60px;
+    height: 60px;
   }
 
   .features-list {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .stats-section {
     position: relative;
     top: auto;
+    left: auto;
+    height: auto;
     padding: 40px 20px;
+    margin: 0;
+  }
+
+  .stats-heading {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    font-size: 24px;
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .how-it-works-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 40px 20px;
   }
 
   .how-it-works-section {
     position: relative;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-section {
+    position: relative;
     top: auto;
-    left: 20px;
-    right: 20px;
-    max-width: calc(100% - 40px);
+    left: auto;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    max-width: 293px;
+  }
+
+  .email-input {
+    width: 100%;
+    max-width: 286px;
   }
 }

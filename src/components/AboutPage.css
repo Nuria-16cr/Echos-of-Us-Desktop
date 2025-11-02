@@ -428,31 +428,64 @@
 }
 
 @media (max-width: 768px) {
+  .about-page {
+    min-height: auto;
+    padding-bottom: 340px;
+  }
+
+  .about-background-image {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 300px;
+  }
+
+  .about-blur-overlay {
+    display: none;
+  }
+
   .about-nav-bar {
-    top: 20px;
-    right: 20px;
-    gap: 40px;
-    font-size: 16px;
+    top: 15px;
+    right: 15px;
+    gap: 30px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .about-nav-item {
+    font-size: 14px;
   }
 
   .about-logo-container {
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
   }
 
   .about-main-logo {
-    height: 32px;
+    height: 28px;
   }
 
   .about-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
     font-size: 32px;
-    left: 20px;
+    margin: 100px auto 30px;
+    text-align: center;
+    padding: 0 20px;
   }
 
   .about-content-sections {
+    position: relative;
+    top: auto;
+    left: auto;
     flex-direction: column;
     padding: 0 20px;
-    gap: 40px;
+    gap: 30px;
+    margin-bottom: 40px;
   }
 
   .about-left-column,
@@ -460,35 +493,82 @@
     width: 100%;
   }
 
+  .about-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
   .about-features-section {
     position: relative;
     top: auto;
     left: auto;
-    margin: 40px 20px;
+    width: calc(100% - 40px);
+    margin: 0 auto 40px;
+    padding: 0 20px;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .about-features-icon {
+    width: 60px;
+    height: 55px;
   }
 
   .about-features-list {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .about-quote-section {
     position: relative;
     top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
     padding: 40px 20px;
+    margin: 0;
   }
 
   .about-quote-content {
     width: 100%;
     padding: 0;
+    gap: 15px;
   }
 
   .about-quote-main {
     width: 100%;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .about-quote-attribution {
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .about-footer-section {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .about-footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .about-newsletter-form {
+    width: 100%;
+    max-width: 293px;
+  }
+
+  .about-email-input {
+    width: 100%;
+    max-width: 286px;
   }
 }
