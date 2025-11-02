@@ -26,6 +26,31 @@ GitHub Pages requires managing base paths, which can be tricky. Here are **much 
 
 **That's it!** Your site will be live at `https://your-site-name.netlify.app`
 
+### Setting Up the Backend API URL
+
+After deploying the frontend to Netlify, you need to:
+
+1. **Deploy your backend server** (choose one):
+   - **Render**: Go to https://render.com → New Web Service → Connect GitHub → Select your repo → Use `render.yaml` config
+   - **Railway**: Go to https://railway.app → New Project → Deploy from GitHub → Use `railway.json` config
+   - **Heroku**: Use the `Procfile` for deployment
+
+2. **Get your backend URL** (e.g., `https://your-backend.onrender.com` or `https://your-backend.railway.app`)
+
+3. **Add environment variable in Netlify**:
+   - Go to your Netlify site dashboard
+   - Site settings → Environment variables
+   - Add new variable:
+     - **Key**: `VITE_API_URL`
+     - **Value**: Your backend URL (e.g., `https://your-backend.onrender.com`)
+   - Save and redeploy
+
+4. **Set environment variables on backend**:
+   - In Render/Railway/etc., add `OPENAI_API_KEY` environment variable
+   - Set it to your OpenAI API key
+
+**Important**: The frontend needs `VITE_API_URL` set in Netlify to connect to your backend!
+
 ---
 
 ## Option 2: Vercel (Also Easy!)

@@ -153,10 +153,10 @@ export default function App() {
       setIsTyping(true);
     } catch (err) {
       console.error(`Error talking to ${currentChat}:`, err);
-      // Show error message to user
+      // Show user-friendly error message
       const errorMessage = {
         sender: currentChat,
-        text: "Sorry, I'm having trouble connecting right now. Please make sure the backend server is running.",
+        text: "Sorry, I'm having trouble connecting to the server right now. This might be a temporary issue - please try again in a moment!",
         displayText: "",
         timestamp: new Date(),
         fullyTyped: true,
