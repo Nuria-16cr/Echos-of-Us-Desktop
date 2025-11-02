@@ -128,6 +128,7 @@ export default function App() {
 
     try {
       const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+      console.log("API_URL:", API_URL); // Debug log
       const res = await fetch(`${API_URL}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
